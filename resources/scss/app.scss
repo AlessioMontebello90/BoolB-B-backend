@@ -1,0 +1,187 @@
+@use "./partials/variables" as *;
+@use "./partials/mixins" as *;
+
+@import "~bootstrap/scss/bootstrap";
+
+// debug
+.debug {
+    background-color: rgba(255, 0, 0, 0.3);
+    border: 1px dashed red;
+    color: red;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(-45deg, #c68c7a, #be7d96, #7aa5b4, #86b6aa);
+    background-size: 500% 500%;
+    animation: gradient 25s ease infinite;
+    height: 100vh;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.card-image {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    height: 150px;
+    overflow: hidden;
+    img {
+        object-fit: cover;
+        position: relative;
+        bottom: 50%;
+        left: 0;
+    }
+}
+
+// test
+#suggerimenti {
+    color: #333333;
+    position: absolute;
+    display: none;
+    border: 1px solid #ff7977;
+    max-width: 50%;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: #fff;
+    z-index: 3;
+}
+
+#suggerimenti ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#suggerimenti li {
+    padding: 8px;
+    cursor: pointer;
+}
+
+#suggerimenti li:hover {
+    background-color: #777777;
+}
+
+.dashboard-space {
+    // background-color: fuchsia;
+    max-height: 80vh;
+}
+.dashboard-head {
+    height: 10vh;
+}
+
+.dashboard-pagination {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* WebKit (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 4px; /* Larghezza della barra di scorrimento orizzontale e verticale */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ff7977; /* Colore della maniglia della barra di scorrimento */
+    border-radius: 3px; /* Raggio degli angoli della maniglia della barra di scorrimento */
+}
+
+/* Firefox */
+::-moz-scrollbar {
+    width: 4px;
+}
+
+::-moz-scrollbar-thumb {
+    background-color: #ff7977;
+    border-radius: 3px;
+}
+
+/* Edge (basato su Windows) */
+::-ms-scrollbar {
+    width: 4px;
+}
+
+::-ms-scrollbar-thumb {
+    background-color: #ff7977;
+    border-radius: 3px;
+}
+
+// index dei messages
+.message-space {
+    height: 30vh;
+}
+.message-area {
+    height: 15vh;
+    overflow-x: hidden;
+}
+
+.head-message-index {
+    color: gold;
+}
+.message-info {
+    color: #999999;
+}
+
+.statistics-display {
+    width: 100%;
+    aspect-ratio: 1;
+}
+.card-pay {
+    cursor: pointer;
+}
+.dash-apartment{
+    border-radius: .5rem;
+    background-color: #fff;
+
+}
+.dashboard-menu {
+    width: 100%;
+    background-color: salmon;
+    color: whitesmoke;
+}
+.btn-style {
+    background-color: transparent;
+    border-radius: 0.5rem;
+    border: 1px solid #ff7977;
+    color: #ff7977;
+    font-weight: 700;
+    transition: 1s;
+}
+.btn-style:hover {
+    background-color: #ff7977;
+    color: #ffffff;
+    transform: translate(2px, -2px);
+    box-shadow: -3px 3px 10px 1px #222222;
+    transition: 0.5s ease-in-out;
+}
+.nav-btn-container {
+    background-color: white;
+    border-radius: 0.5rem;
+
+    
+}
+.subtitle{
+    color: #ff7977;
+    letter-spacing: .2rem;
+    margin: 1rem 0;
+}
+.logo-txt {
+    color: #ff7977;
+    font-weight: 600;
+  }
+.preview-msg{
+    max-height: 2rem;
+    max-width: 100%;
+    overflow: hidden;
+}
+.dashboard-container{
+    max-height: 80vh;
+    overflow-y: auto;
+}
